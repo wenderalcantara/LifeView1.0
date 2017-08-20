@@ -1,0 +1,81 @@
+﻿.filtroColuna
+{ 
+    height:27px; 
+    -webkit-border-radius:10px; 
+    -moz-border-radius:10px;
+	border-radius:10px; 
+	-webkit-box-shadow:rgb(76, 116, 122) -2px 0px 13px	0px; 
+	-moz-box-shadow:rgb(76, 116, 122) -2px 0px 13px 0px; 
+	box-shadow:rgb(76,	116, 122) -2px 0px 13px 0px; 
+	color:rgb(255, 255, 255);
+	background-color:rgb(0,	0, 0);
+} 
+.CabGrupo 
+{ 
+    height:45px;
+    padding:2px 0px 5px 0px; 
+    margin:5px 0px	5px 0px;
+    line-height:45px;
+    vertical-align: middle; 
+    text-align:center;
+	color:rgb(255, 255, 255); 
+	font-weight:bold; 
+	background-color:rgb(145, 186,	87); 
+	-webkit-border-radius:5px 5px 0px 0px; 
+	-moz-border-radius:5px 5px
+	0px 0px; 
+	border-radius:5px 5px 0px 0px; 
+} 
+.tabela table 
+{ 
+    font-family: arial, sans-serif;
+	color:black; 
+	border-collapse: collapse; 
+	width: 100%; 
+} 
+.tabela td, th 
+{ 
+    text-align:	left; 
+    padding: 8px; 
+} 
+.tabela th 
+{
+    background-color:rgb(145, 186, 87);
+} 
+.tabela tr:nth-child(even)
+{ 
+    background-color: #dddddd; 
+} 
+.tabela tr:nth-child(odd) 
+{ 
+    background-color:rgb(189,189, 189); 
+} 
+.tabela tfoot tr:nth-last-child(n -1) 
+{ 
+    font-weight:bold; 
+    background-color:rgb(143,143, 143); 
+} 
+.tabela tfoot td:first-child 
+{ 
+    -webkit-border-bottom-left-radius:5px; 
+    -moz-border-bottom-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+} 
+.tabela tfoot td:last-child 
+{ 
+    -webkit-border-bottom-right-radius: 5px; 
+    -moz-border-bottom-right-radius:5px; 
+    border-bottom-right-radius: 5px; 
+} 
+.tabela h2,h1 
+{ 
+    text-align:center; 
+}
+.divImg
+{
+	float:left;text-align:left;width=10%;
+}
+.divTitRel
+{
+	float:right text-align:center;width=90%;height:100%;
+}

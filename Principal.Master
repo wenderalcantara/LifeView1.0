@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="Gestor.Principal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript" src="Scripts/canvasjs-1.8.1-beta2/canvasjs.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+    <%--<link href="~/Styles/main.css" rel="stylesheet" type="text/css" />--%>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<%--<script src="Scripts/jquery-1.8.2.min.js"></script>--%>
+<script language="JavaScript" type="text/JavaScript" defer="defer">
+    //$(document).ready(function(){
+    //    //alert("teste...");
+    //    $('.header-login').css("background-color", "green");
+    //    $('.content_title').css("background-color", "green");
+    //    $('.btn').css("background-color", "green");
+    //})
+</script>
+
+<body>
+    <form id="Form1" runat="server" enctype="multipart/form-data" method="post">
+        <%--<recaptcha:RecaptchaControl ID="recaptcha" runat="server" PublicKey="6Ldf4ysUAAAAADZVYBbCPTGm5FOiNEht_MjS5P_n" PrivateKey="6Ldf4ysUAAAAACHXO2zyF2mRSBt8xhASmIAsC09O"/>--%>
+        <div class="page">
+            <asp:ToolkitScriptManager ID="tsm" runat="server" EnableScriptGlobalization="true"
+                EnableScriptLocalization="true" AsyncPostBackTimeout="120" EnablePageMethods="True">
+            </asp:ToolkitScriptManager>
+            <script type="text/javascript">
+                var prm = Sys.WebForms.PageRequestManager.getInstance();
+                prm.add_endRequest(endRequest);
+
+                function endRequest(sender, endRequestEventArgs) {
+                    var theError = endRequestEventArgs.get_error();
+                    if (theError !== null) {
+                        HideAviso();
+                        alert(theError.description);
+                        endRequestEventArgs.set_errorHandled(true);
+                    }
+                }
+            </script>
+
+            <asp:ModalPopupExtender BehaviorID="modalloding" Drag="true" ID="modalloding1" TargetControlID="pnlLoading" PopupControlID="pnlLoading" BackgroundCssClass="modalBackground" runat="server" DynamicServicePath="" Y="0" Enabled="True"></asp:ModalPopupExtender>
+
+            <asp:Panel runat="server" ID="pnlLoading" CssClass="modalMainPanelAguarde"  HorizontalAlign="Center"> 
+                <div style="vertical-align: middle;"> 
+                    <span class="divProcessando"> 
+                        <asp:Image ID="imgAguarde" runat="server" ImageAlign="Middle" class=".img-responsive" ImageUrl="~/imagens/loading.gif" />  
+                        Aguarde...
+                    </span> 
+                </div> 
+            </asp:Panel>       
+            <asp:UpdatePanel runat="server" ID="upContetPlaceHolder" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+
+            <%--<div class="clear">
+            </div>--%>
+            <div class="footer" > 
+                <%--<asp:Image ID="Image1" runat="server"  ImageUrl="~/imagens/rodape.png"/> --%>       
+            </div>
+        </div>
+    
+    <br />
+    </form>
+</body>
+</html>

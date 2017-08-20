@@ -1,0 +1,137 @@
+
+<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Site.Master.cs" Inherits="Gestor.SiteMaster" %>
+<!DOCTYPE html>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<html lang="pt">
+<head id="Head1" runat="server">
+    <title>Gestor Online</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- META SEARCH TAGS -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Rede Framework">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width">
+    <!-- OG TAGS -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Gestor Online" />
+    <meta property="og:locale" content="pt_br">
+    <meta property="og:site_name" content="Gestor Online">
+    <meta property="og:description" content="Sistema de Gestão Online." />
+    <meta property="og:type" content="website" />
+    <meta property="article:author" content="http://redeframework.com.br" />
+    <meta property="og:url" content="http://redeframework.com.br" />
+    <meta property="og:image" content="~/imagens/og.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <!-- END OG TAGS -->
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="Styles/bootstrap.min.css">
+    <script type="text/javascript" src="Scripts/canvasjs-1.8.1-beta2/canvasjs.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+     
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="Form1" runat="server" enctype="multipart/form-data" method="post" >
+        <div class="page" onmouseover="personaliza();">
+            <asp:ToolkitScriptManager ID="tsm" runat="server" EnableScriptGlobalization="true"
+                EnableScriptLocalization="true" AsyncPostBackTimeout="120" EnablePageMethods="True">
+            </asp:ToolkitScriptManager>
+            <script type="text/javascript">
+                var prm = Sys.WebForms.PageRequestManager.getInstance();
+                prm.add_endRequest(endRequest);
+
+                function endRequest(sender, endRequestEventArgs) {
+                    var theError = endRequestEventArgs.get_error();
+                    if (theError !== null) {
+                        HideAviso();
+                        alert(theError.description);
+                        endRequestEventArgs.set_errorHandled(true);
+                    }
+                }
+            </script>
+
+            <asp:ModalPopupExtender BehaviorID="modalloding" Drag="true" ID="modalloding1" TargetControlID="pnlLoading" PopupControlID="pnlLoading" BackgroundCssClass="modalBackground" runat="server" DynamicServicePath="" Y="0" Enabled="True"></asp:ModalPopupExtender>
+
+            <asp:Panel runat="server" ID="pnlLoading" CssClass="modalMainPanelAguarde"  HorizontalAlign="Center"> 
+                <div style="vertical-align: middle;"> 
+                    <span class="divProcessando"> 
+                        <asp:Image ID="imgAguarde" runat="server" ImageAlign="Middle" class=".img-responsive" ImageUrl="~/imagens/loading.gif" />  
+                        Aguarde...
+                    </span> 
+                </div> 
+            </asp:Panel>
+
+            <asp:UpdatePanel ID="upHeader" runat="server" UpdateMode="Conditional" >
+                <ContentTemplate>
+                    <header class="header" >
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="loginDisplay">
+                                    <div id="logoCliente" class="col-md-1">
+                                        <asp:ImageButton ID="imgLogo" PostBackUrl="~/Default.aspx" class=".img-responsive" runat="server" />          
+                                    </div>
+                                    <div class="title col-md-8">
+                                        <h2></h2>
+                                        <h1><asp:Label ID="lbl_tituloSite" runat="server" Text="SISTEMA DE GESTÃO"></asp:Label></h1>
+                                    </div>
+                                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                        <AnonymousTemplate>[ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Logar</a> ]</AnonymousTemplate>
+                                        <LoggedInTemplate>
+                                            <div class="wrapper-logon col-md-3">
+                                                Usuário Logado:
+                                                <span class="bold" ><asp:LoginName ID="HeadLoginName" runat="server" /></span>
+                                                [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Sair" LogoutPageUrl="~/" /> ]
+                                                [ <a href="~/Account/ChangePassword.aspx" ID="A1" runat="server">Alterar Senha</a> ]
+                                            </div>
+                                        </LoggedInTemplate>
+                                    </asp:LoginView>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+
+            <div class="main" >
+                <div id="tab-menu" class="col-md-2">
+                    <div class="titulo-menu">NAVEGAÇÃO</div>
+                    <ajaxToolkit:TabContainer CssClass="Tab" ID="TabMenu" runat="server"></ajaxToolkit:TabContainer>
+                    <ajaxToolkit:Accordion ID="AccordionMenu" runat="server" SelectedIndex="0" HeaderCssClass="accordionHeader"
+                        HeaderSelectedCssClass="accordionHeaderSelected" ContentCssClass="accordionContent" AutoSize="None"
+                        FadeTransitions="true" TransitionDuration="250" FramesPerSecond="40" RequireOpenedPane="false" SuppressHeaderPostbacks="true">
+                        <Panes>
+                        
+                    
+                        </Panes>            
+                        <HeaderTemplate>...</HeaderTemplate>
+                        <ContentTemplate>...</ContentTemplate>
+                    </ajaxToolkit:Accordion>
+                </div>
+                <div class="col-md-10">
+                    <asp:UpdatePanel runat="server" ID="upContetPlaceHolder" UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+            <footer>
+                <div class="col-md-8">
+                    &copy;Todos os direitos reservados Rede FrameWork | Desenvolvido por <a href="http://redeframework.com.br" target="_blank">Rede FrameWork</a>.
+                </div>
+                <div class="logoSindico col-md-1">
+                    <img src="imagens/logo.png" alt="Gestor Online" />
+                    <%--<asp:ImageButton ID="ImgLogoRodape" PostBackUrl="~/Default.aspx" AlternateText="Gestor Online" runat="server" /> --%>
+                </div>
+            </footer>
+        </div>
+    </form>
+   <%-- <script type="text/javascript"src="Scripts/googleapis.js"></script> --%>   
+    <%--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>--%>
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <%--<script src="scripfFilter.js" defer="DEFER"></script>--%>
+    <script type="text/javascript"> personaliza();</script>
+</body>
+</html>

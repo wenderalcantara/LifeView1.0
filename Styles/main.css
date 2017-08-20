@@ -1,0 +1,664 @@
+﻿.logo 
+{
+    display:block;
+    position:relative;
+    float:left;
+    
+behavior:url('~/Scripts/PIE.htc');}
+
+.cabecalho
+{
+    display:inline-block;
+    position:relative;
+    
+    line-height:80px;
+    
+    text-align:center;
+    font-weight:bold;
+    font-size:25px;
+    color:rgb(0, 122, 222);
+    font-family:Verdana,sans-serif;
+    
+    border-bottom:7px solid rgb(0, 122, 222);
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-bottomright:20px;
+    border-bottom-right-radius:20px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-bottomleft:30px;
+    border-bottom-left-radius:30px;
+    border-radius: 0px 0px 30px 30px; /*(top-left, top-right, bottom-right, bottom-left).*/    
+    behavior:url('~/Scripts/PIE.htc');
+    
+}
+
+.fundo_modal
+{
+    
+	background-color:rgba(0, 0, 0, 0.769531);
+	behavior:url('~/Scripts/PIE.htc');
+}
+.modal
+{
+    position:relative;
+    background-color:rgba(255,255,255,1);
+    height:auto;
+	behavior:url('~/Scripts/PIE.htc');
+}
+/*
+.content_title
+{    
+    cursor:move;
+    margin-top:10px;
+    padding: 0px 0px 0px 10px;	
+    height:auto;   
+	border-top-width:3px;		
+	color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 15px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    behavior: url('~/Scripts/PIE.htc');
+    background-image: -ms-linear-gradient(90deg,rgb(0,0,0) 0%,rgb(99,99,99) 3%,rgb(0,0,0) 100%);
+
+	border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
+}*/
+.content_title
+{    
+    cursor:move;
+    margin-top:10px;
+    padding: 0px 0px 0px 10px;	
+    height:auto;   
+	border-style:none;
+	border-top-width:3px;	
+	background-color:rgb(105, 105, 105);
+	color:rgb(255, 255, 255);
+	/*text-align:center;*/
+	font-weight:bold;
+	font-size:15px;	
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;    
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    behavior:url('~/Scripts/PIE.htc');
+}
+
+.content_title_itens
+{	
+	border-top-width:3px;	
+	
+	color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0px 0px 0px 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    behavior: url('~/Scripts/PIE.htc');
+    background-image: -ms-linear-gradient(90deg,rgb(0,0,0) 0%,rgb(99,99,99) 3%,rgb(0,0,0) 100%);
+}
+
+.abaDetalhe
+{   
+    height:100%;
+    display:block;
+    border-width:0px 3px;
+    border-color:rgb(105, 105, 105);
+}
+.ajax__tab_xp
+{    
+    padding:8px 5px 0px 5px;
+}
+
+.content
+{   
+    display:block;
+    position:static;
+    height: auto;
+    padding:10px;    
+    
+    border-right-style:solid;	
+	border-left-style:solid;
+	border-color:rgb(105, 105, 105);				
+	behavior:url('~/Scripts/PIE.htc');
+}
+
+
+.content_geral
+{
+    display:block;
+    position:relative;
+    height: auto;
+    padding:10px; 
+    margin-bottom:5px;       
+    border-style:solid;
+    border-top-style:none;		
+	border-color:rgb(105, 105, 105);
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;    
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;						
+behavior:url('~/Scripts/PIE.htc');}
+
+.content_detalhe
+{ 
+    width:900px;
+    
+	background-color:White;
+	-webkit-border-radius: 10px;	
+    -moz-border-radius: 10px;    
+    border-radius: 10px;    
+    behavior:url('~/Scripts/PIE.htc');}
+ 
+ .content_up
+{ 
+    width:600px;
+    
+	background-color:White;
+	-webkit-border-radius: 10px;	
+    -moz-border-radius: 10px;    
+    border-radius: 10px;    
+    behavior:url('~/Scripts/PIE.htc');}
+
+.content_itens
+{
+    display:block;
+    position:relative;
+    height: auto;        
+    /*border-style:solid;		*/
+	border-color:rgb(105, 105, 105);			
+behavior:url('~/Scripts/PIE.htc');}
+
+.contentCenter
+{
+    text-align:center;
+    padding:26px 0px 0px 0px;    
+behavior:url('~/Scripts/PIE.htc');}
+
+.tudo
+{
+    /*width:90%;*/
+    height:auto;
+    min-height:650px;
+    background-color:rgb(183, 184, 182);            
+    
+    border: 1px solid #496077;
+    padding: 12px 12px 12px 12px;    
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;    
+    behavior: url(PIE.htc);
+    margin: 20px auto 0px auto;
+    behavior: url('~/Scripts/PIE.htc');
+    behavior: url('~/Scripts/PIE.htc');
+    background-image: linear-gradient(top,rgb(255,255,255) 56%,rgba(189,189,189,1) 100%);
+}
+
+.linha
+{
+    display:inline-block;    
+behavior:url('~/Scripts/PIE.htc');}
+
+.descricao
+{
+    /*margin-right:100px;*/
+    display: block;
+    width: auto;
+    padding-right: 10px;
+    font-weight: bold;
+behavior:url('~/Scripts/PIE.htc');}
+
+
+
+.obrigatorio
+{
+	display:block;
+	width: auto;
+	padding-right: 10px;
+	font-weight: bold;
+	color: #FF0000;
+    behavior:url('~/Scripts/PIE.htc');}
+    
+ .teste
+ {
+    list-style-type:armenian;    
+ }
+
+.valor
+{
+    display:block;    
+    width:auto;           
+	behavior:url('~/Scripts/PIE.htc');}
+
+	
+.valorImagem
+{    
+    display:inline-block;    
+    text-align:left;   
+    vertical-align:top; 
+    width:100%;           
+	behavior:url('~/Scripts/PIE.htc');}
+	
+.valorhtml
+{
+    display:block; 
+    border-width:1px;
+    border-style:solid;  
+    width:100%;           
+	behavior:url('~/Scripts/PIE.htc');}
+
+.Campos
+{
+    vertical-align:top;    
+    display:inline-block;        
+    width:auto;             
+    padding-right:5px;
+    padding-left:5px;
+    margin-bottom:5px;
+    margin-top:5px;
+behavior:url('~/Scripts/PIE.htc');}
+
+
+
+.CamposPesquisa
+{
+    height: 25px;   
+    display:block;                         
+    
+    line-height:25px;   
+    padding:0px 0px 0px 100px;        
+	behavior:url('~/Scripts/PIE.htc');
+}
+
+.descricaoPesquisa
+{
+	float:left;	
+    display: block;
+    text-align:right;
+    
+    line-height:25px; 
+    width: 30%;
+    height: 25px; 
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.valorPesquisa
+{
+    width:auto;       
+    text-align:center;    
+    padding-right: 10px;
+    padding-left:10px;
+    font-weight: bold;                   
+	behavior:url('~/Scripts/PIE.htc');	
+}
+
+.botoes
+{
+	text-align:center;
+	border-bottom-style:solid;
+	border-right-style:solid;
+	border-left-style:solid;
+	padding:0px 0px 10px 0px;
+	margin:0px 0px 20px 0px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;    
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+behavior:url('~/Scripts/PIE.htc');}
+
+.modal
+{
+	display:block;
+	border-style:solid;
+	min-width:400px;	
+	text-align:center;
+	vertical-align:middle;
+	background-color:rgb(255, 255, 255);
+	padding:20px 50px 20px 50px;
+	border-width:5px;
+	
+behavior:url('~/Scripts/PIE.htc');}
+.texto_modal
+{
+	display:block;
+	font-size:15px;
+	font-weight:bold;
+	padding:20px 0px 30px 0px;
+behavior:url('~/Scripts/PIE.htc');}
+
+.pnlBtnNovo
+{
+    display:block;
+    text-align:center;
+    /*position:static;*/
+    height: auto; 
+    
+}
+
+
+.botaoMin
+{
+	background-color:rgb(105, 105, 105);
+	width:100%;
+	color:Black;	
+	height:10px;
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+
+}
+
+.botao
+{
+    /*margin: 5px auto auto 5px;*/
+    margin-left:5px;
+    padding:3px 35px 3px 35px;
+    width: auto;
+    font-size:14px;
+    font-weight:bolder;    
+    text-align: center;
+    text-decoration: none;
+    
+	/*
+    padding:0px 35px 0px 35px;
+	height:30px;
+    font-size:20px;
+    */	
+	background-color:rgb(103, 110, 101);	
+	color:rgb(255, 255, 255);
+	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(rgba(48,48,48,1)),color-stop(0.47,rgba(122,122,122,1)),to(rgba(43,43,43,1)));
+	background-image:-moz-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	background-image:-o-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	background-image:-ms-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	-pie-background: linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	border-style:none;	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;	
+	
+behavior:url('~/Scripts/PIE.htc');}
+
+.botalImagem
+{
+    border-width:3px;
+    border-style:outset;
+    -webkit-box-shadow:rgba(0, 0, 0, 0.368627) -4px -2px 7px 0px;
+    -moz-box-shadow:rgba(0, 0, 0, 0.368627) -4px -2px 7px 0px;
+    box-shadow:rgba(0, 0, 0, 0.368627) -4px -2px 7px 0px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+
+}
+
+.botalImagem:hover
+{    
+    border-style:inset;
+}
+
+.botaoPainel
+{
+    display:inline-block;
+    margin: 5px auto;    
+    width: auto;
+    height:100px;
+    font-size:14px;
+    font-weight:bolder;    
+    text-align: center;
+    text-decoration: none;
+    border:4px outset rgba(153, 0, 0, 0.862745);
+	/*
+    padding:0px 35px 0px 35px;
+	height:30px;
+    font-size:20px;
+    */	
+	background-color:rgb(103, 110, 101);	
+	color:rgb(255, 255, 255);
+	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(rgba(48,48,48,1)),color-stop(0.47,rgba(122,122,122,1)),to(rgba(43,43,43,1)));
+	background-image:-moz-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	background-image:-o-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	background-image:-ms-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	-pie-background: linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;	
+	
+behavior:url('~/Scripts/PIE.htc');}
+
+.botaoPainel:hover
+{
+    border:4px inset rgba(153, 0, 0, 0.862745);
+}
+
+.grid
+{
+	text-align:center;    	        
+    height: auto;           
+    border-right-style:solid;
+	border-bottom-style:solid;
+	border-left-style:solid;
+	border-color:rgb(105, 105, 105);		
+		
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;    
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+behavior:url('~/Scripts/PIE.htc');}
+
+.foto_produto
+{
+	display:block;
+	float:left;
+	position:relative;
+	border-style:solid;	
+	width:28%;
+	height:auto;
+	min-height:300px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+behavior:url('~/Scripts/PIE.htc');}
+
+.itens_venda
+{
+	display:block;
+	float:right;
+	position:relative;
+	border-style:solid;	
+	width:70%;
+	height:300px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+behavior:url('~/Scripts/PIE.htc');}
+
+.total_venda
+{	
+	color:rgb(176, 37, 37);	
+	font-weight:bold;
+	font-size:18px;	
+	width:100%;
+	position: relative;
+	display: inline-table;
+	border-color:rgb(105, 105, 105);		
+	border-style: solid;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align: right;		
+	margin:5px 0px 0px 0px;
+	padding: 5px 10px 5px 0px; 
+behavior:url('~/Scripts/PIE.htc');}
+
+#modalContainer
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9990;   
+    top: 0px;
+    left: 0px;
+    /*filter: alpha(opacity=8);*/
+	opacity: 0.7;
+    background-color: #000;
+	
+behavior:url('~/Scripts/PIE.htc');}
+
+/*#alertBox
+{
+	position:absolute;
+	white-space:pre-wrap;
+	width: 400px;
+	height:auto;
+	z-index:9999;
+	background-color:rgba(255,255,255,1);
+	border-style:solid;
+	-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;	
+	-webkit-box-shadow:rgb(0, 0, 0) 6px 8px 8px 0px;-moz-box-shadow:rgb(0, 0, 0) 6px 8px 8px 0px;box-shadow:rgb(0, 0, 0) 6px 8px 8px 0px;
+    behavior:url('~/Scripts/PIE.htc');}
+
+#alertBox h1
+{
+    margin: 0;
+    font-size:14px;
+    padding: 2px 0 2px 5px;
+    z-index: 9999;    
+    text-align:center;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    background-color:rgba(71, 71, 71, 0.816406);
+    font-size:17px;
+behavior:url('~/Scripts/PIE.htc');}
+
+#modalContainer > #alertBox
+{
+    position: fixed;
+    z-index: 9990;
+	
+    
+behavior:url('~/Scripts/PIE.htc');}
+
+#alertBox p
+{
+   
+	
+	height:auto;
+	min-height: 50px;
+    text-align:center;
+	font-size:14px;
+behavior:url('~/Scripts/PIE.htc');}
+
+#alertBox #closeBtn
+{
+    display: block;
+    position: relative;
+    margin: 5px auto;
+    padding: 3px;
+    width: 35px;
+    font-size:14px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+       	
+	background-color:rgb(103, 110, 101);	
+	color:rgb(255, 255, 255);
+	background-image:-webkit-gradient(linear,0% 0%,0% 100%,from(rgba(48,48,48,1)),color-stop(0.47,rgba(122,122,122,1)),to(rgba(43,43,43,1)));
+	background-image:-moz-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	background-image:-o-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	background-image:-ms-linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	-pie-background: linear-gradient(top,rgba(48,48,48,1) 0%,rgba(122,122,122,1) 47%,rgba(43,43,43,1) 100%);
+	border-style:none;	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;	
+    
+behavior:url('~/Scripts/PIE.htc');}
+
+#alertBox #closeBtnCtr
+{
+    display:inline-block;
+    position: relative;
+    margin: 5px 10px 5px 10px;
+    padding: 3px;
+    width: 35px;
+    font-size:14px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background-color:#016088;    
+    color:White; 
+behavior:url('~/Scripts/PIE.htc');}
+
+#alertBox #OkBtnCtr
+{
+	display:inline-block;
+    position: relative;
+    margin: 5px 5px 5px 120px;
+    padding: 3px;
+    width: 35px;
+    font-size:14px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background-color:#016088;    
+    color:White;  
+        
+behavior:url('~/Scripts/PIE.htc');}
+*/
+
+
+.modalMainPanelAguarde 
+{ 
+    background: #fff; 
+    border: solid 1px  #c27201;    
+    /*position:absolute; */
+    position: absolute;     
+    display:block ;
+    margin-top:50%;       
+    z-index:9990;
+}
+divProcessando 
+{ 
+    font-size:16px; 
+    color: #c27201; 
+    vertical-align:middle;
+    position: absolute; 
+    z-index:9990;
+}
+.modalBackground 
+{
+   background-color:#000;
+   filter:alpha(opacity=10);
+   opacity:0.7;
+   vertical-align:middle;
+   
+}
+
+/*ESTILOS GRIDVIEW*/
+
+.RowStyle
+{
+    
+}

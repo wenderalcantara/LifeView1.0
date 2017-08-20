@@ -1,0 +1,47 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Relatorio.master.cs" Inherits="Gestor.Relatorio1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/main.css" rel="stylesheet" type="text/css" />
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1"/> 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div>
+        <asp:ToolkitScriptManager ID="tsm" runat="server" EnableScriptGlobalization="true"
+            EnableScriptLocalization="true" AsyncPostBackTimeout="120" EnablePageMethods="True">
+        </asp:ToolkitScriptManager>
+        <script type="text/javascript">
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(endRequest);
+
+            function endRequest(sender, endRequestEventArgs) {
+                var theError = endRequestEventArgs.get_error();
+                if (theError !== null) {
+                    HideAviso();
+                    alert(theError.description);
+                    endRequestEventArgs.set_errorHandled(true);
+                }
+            }
+
+        </script>
+        <div >
+           
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

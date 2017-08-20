@@ -1,0 +1,65 @@
+<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Report.Master.cs" Inherits="Gestor.ReportMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+<head runat="server">
+    <title>ISBF-Reports</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1"/> 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <asp:ToolkitScriptManager ID="tsm" runat="server" EnableScriptGlobalization="true"
+            EnableScriptLocalization="true" AsyncPostBackTimeout="120" EnablePageMethods="True">
+        </asp:ToolkitScriptManager>
+        <script type="text/javascript">
+            var prm = Sys.WebForms.PageRequestManager.getInstance();
+            prm.add_endRequest(endRequest);
+
+            function endRequest(sender, endRequestEventArgs) {
+                var theError = endRequestEventArgs.get_error();
+                if (theError !== null) {
+                    HideAviso();
+                    alert(theError.description);
+                    endRequestEventArgs.set_errorHandled(true);
+                }
+            }
+
+        </script>
+        <%--<asp:Panel ID="Panel1" runat="server" CssClass="header"  ScrollBars="None">--%>
+        <asp:ModalPopupExtender BehaviorID="modalloding" Drag="true" ID="modalloding1" TargetControlID="pnlLoading" 
+                PopupControlID="pnlLoading" BackgroundCssClass="modalBackground" runat="server" 
+                DynamicServicePath="" Y="0" Enabled="True"> 
+            </asp:ModalPopupExtender> 
+            <asp:Panel runat="server" ID="pnlLoading" CssClass="modalMainPanelAguarde"  HorizontalAlign="Center"> 
+                <div style="vertical-align: middle"> 
+                    <span class="divProcessando"> 
+                        <asp:Image ID="imgAguarde" runat="server" ImageAlign="Middle" ImageUrl="~/imagens/loading.gif" />  
+                        Aguarde...
+                    </span> 
+                </div> 
+            </asp:Panel>
+        
+        
+        <div class="main">
+            <asp:UpdatePanel runat="server" ID="upContetPlaceHolder" UpdateMode="Conditional">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
